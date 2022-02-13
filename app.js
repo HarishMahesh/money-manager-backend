@@ -13,11 +13,7 @@ const connectToBb = require("./config/db");
 var app = express();
 connectToBb();
 
-app.use(
-  cors({
-    origin: "https://money-manager-hack.herokuapp.com",
-  })
-);
+app.use(cors());
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
